@@ -1,0 +1,9 @@
+target "Eclipse Oxygen" with source requirements
+
+location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
+ org.eclipse.platform.feature.group lazy
+ org.eclipse.rcp.feature.group lazy
+ org.eclipse.jdt.feature.group lazy
+ org.eclipse.equinox.p2.discovery.feature.feature.group lazy
+ org.eclipse.equinox.executable.feature.group lazy
+}
