@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.bmaggi</groupId>
   <artifactId>eclipse-tycho-archetype</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>Archetype - Eclipse Tycho</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/bmaggi/eclipse-tycho-archetype</url>
   <packaging>maven-archetype</packaging>
 
   <properties>
@@ -21,7 +20,22 @@
     </developer>
   </developers>
 
-
+	<organization>
+		<name>Benoit Maggi</name>
+		<url>https://github.com/bmaggi/</url>
+	</organization>
+	
+	<scm>
+		<connection>scm:git:git://github.com/bmaggi/eclipse-tycho-archetypegit</connection>
+		<developerConnection>scm:git:git@github.com:bmaggi/eclipse-tycho-archetype.git</developerConnection>
+		<url>http://github.com/bmaggi/eclipse-tycho-archetype/tree/master</url>
+		<tag>HEAD</tag>
+	</scm>
+	<issueManagement>
+		<url>https://github.com/bmaggi/eclipse-tycho-archetype/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	
   <build>
     <extensions>
       <extension>
@@ -49,6 +63,12 @@
             <version>2.6</version>
           </plugin>
 
+          <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-release-plugin</artifactId>
+			<version>2.5.3</version>
+          </plugin>		  
+	  
         <plugin>
           <artifactId>maven-archetype-plugin</artifactId>
           <version>3.0.1</version>
