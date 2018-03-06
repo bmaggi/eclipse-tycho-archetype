@@ -6,6 +6,7 @@
   <name>Archetype - Eclipse Tycho</name>
   <url>https://github.com/bmaggi/eclipse-tycho-archetype</url>
   <packaging>maven-archetype</packaging>
+  <inceptionYear>2018</inceptionYear>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,8 +27,8 @@
 	</organization>
 	
 	<scm>
-		<connection>scm:git:git://github.com:bmaggi/eclipse-tycho-archetype.git</connection>
-		<developerConnection>scm:git:git@github.com:bmaggi/eclipse-tycho-archetype.git</developerConnection>
+		<connection>scm:git:ssh://github.com/bmaggi/eclipse-tycho-archetype.git</connection>
+		<developerConnection>scm:git:ssh://github.com/bmaggi/eclipse-tycho-archetype.git</developerConnection>
 		<url>http://github.com/bmaggi/eclipse-tycho-archetype/tree/master</url>
 		<tag>HEAD</tag>
 	</scm>
@@ -130,5 +131,28 @@
       </plugins>
     </pluginManagement>
   </build>
+	<profiles>
+		<profile>
+			<id>ossrh</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 
+		</profile>
+	</profiles>
 </project>
