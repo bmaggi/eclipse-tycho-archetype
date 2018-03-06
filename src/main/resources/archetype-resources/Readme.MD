@@ -7,3 +7,8 @@ TODO:
 ==Structure of the projet==
 
 * ${artifactId}.plugin :
+* ${artifactId}.feature :
+* ${artifactId}.p2 :
+* ${artifactId}.product :
+* ${artifactId}.targetplatform.oxygen :
+* ${artifactId}.test :
