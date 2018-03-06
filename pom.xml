@@ -27,8 +27,8 @@
 	</organization>
 	
 	<scm>
-		<connection>scm:git:git@github.com:bmaggi/eclipse-tycho-archetype.git</connection>
-		<developerConnection>scm:git:git@github.com:bmaggi/eclipse-tycho-archetype.git</developerConnection>
+		<connection>scm:git:https://github.com/bmaggi/eclipse-tycho-archetype.git</connection>
+		<developerConnection>scm:git:https://github.com/bmaggi/eclipse-tycho-archetype.git</developerConnection>
 		<url>http://github.com/bmaggi/eclipse-tycho-archetype/tree/master</url>
 		<tag>HEAD</tag>
 	</scm>
