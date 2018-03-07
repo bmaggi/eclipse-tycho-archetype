@@ -4,6 +4,8 @@ __An archetype to initialize an eclipse project__
 
 Continuous Integration   
 ----------------------
+[![License](https://img.shields.io/badge/license-EPL2-blue.svg)](https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
+[![Build Status](https://travis-ci.org/bmaggi/eclipse-tycho-archetype.svg?branch=master)](https://travis-ci.org/bmaggi/eclipse-tycho-archetype)
 
 Summary
 -------
