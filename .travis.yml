@@ -1,6 +1,10 @@
 language: java
 jdk: oraclejdk8
 
+env:
+  global:
+    - XDG_RUNTIME_DIR="/tmp"
+
 # GUI is required for eclipse testing
 before_script:
   - "export DISPLAY=:99.0"
@@ -12,3 +16,5 @@ script: mvn clean install
 cache:
   directories:
     - '$HOME/.m2/repository'
+    
+    
