@@ -3,9 +3,11 @@
   <groupId>com.github.bmaggi</groupId>
   <artifactId>eclipse-tycho-archetype</artifactId>
   <version>0.1.2-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+  
   <name>Archetype - Eclipse Tycho</name>
   <url>https://github.com/bmaggi/eclipse-tycho-archetype</url>
-  <packaging>maven-archetype</packaging>
+  <description>An archetype to generate eclipse tycho project</description>
   <inceptionYear>2018</inceptionYear>
 
   <properties>
@@ -21,6 +23,14 @@
     </developer>
   </developers>
 
+  	<licenses>
+		<license>
+			<name>Eclipse Public License - v 2.0</name>
+			<url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+  
 	<organization>
 		<name>Benoit Maggi</name>
 		<url>https://github.com/bmaggi/</url>
@@ -32,11 +42,17 @@
 		<url>http://github.com/bmaggi/eclipse-tycho-archetype/tree/master</url>
 		<tag>HEAD</tag>
 	</scm>
+	
 	<issueManagement>
 		<url>https://github.com/bmaggi/eclipse-tycho-archetype/issues</url>
 		<system>GitHub Issues</system>
 	</issueManagement>
 
+	<ciManagement>
+		<system>travis</system>
+		<url>https://travis-ci.org/bmaggi/eclipse-tycho-archetype</url>
+	</ciManagement>	
+	
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
@@ -128,35 +144,57 @@
             </execution>
           </executions>
         </plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+		<plugin>
+		  <groupId>org.sonatype.plugins</groupId>
+		  <artifactId>nexus-staging-maven-plugin</artifactId>
+		  <version>1.6.7</version>
+		  <extensions>true</extensions>
+		  <configuration>
+			<serverId>ossrh</serverId>
+			<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+			<autoReleaseAfterClose>true</autoReleaseAfterClose>
+		  </configuration>
+		</plugin>		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>3.0.1</version>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar-no-fork</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>2.10.4</version>
+			<executions>
+				<execution>
+					<id>attach-javadocs</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>		
+      </plugins>
+    </pluginManagement>
+  </build>
+	<reporting>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.10.4</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>		
-      </plugins>
-    </pluginManagement>
-  </build>
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>  
 	<profiles>
 		<profile>
 			<id>ossrh</id>
@@ -178,7 +216,6 @@
 					</plugin>
 				</plugins>
 			</build>
-
 		</profile>
 	</profiles>
 </project>
