@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ${artifactId}.test
+Bundle-Vendor: ${artifactId}
 Bundle-SymbolicName: ${artifactId}.test
 Bundle-Version: 1.0.0.qualifier
 Fragment-Host: ${artifactId}.plugin;bundle-version="1.0.0"
