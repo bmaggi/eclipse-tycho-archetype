@@ -111,7 +111,7 @@
         </plugin>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tychoVersions-plugin</artifactId>
+          <artifactId>tycho-versions-plugin</artifactId>
           <version>${tychoVersion}</version>
         </plugin>
         <plugin>
@@ -238,7 +238,7 @@
       </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tychoVersions-plugin</artifactId>
+        <artifactId>tycho-versions-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
