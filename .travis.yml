@@ -17,4 +17,4 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     
-    
+after_failure: "cat /home/travis/build/bmaggi/eclipse-tycho-archetype/target/test-classes/projects/test1/project/myArtifactId/myArtifactId.test/target/work/data/.metadata/.log"
