@@ -52,14 +52,3 @@ Known issues
 https://issues.apache.org/jira/browse/ARCHETYPE-505
 temporary solution http://maven.40175.n5.nabble.com/hidden-and-ignore-files-in-an-archetype-td5808355.html
 
-
-To release on maven central.
-----------------------------
-```  
-mvn release:clean release:prepare 
-```  
-follow by
-```  
-mvn release:perform
-```  
-

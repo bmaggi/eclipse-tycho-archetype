@@ -1,6 +1,8 @@
 sudo: required
 language: java
-
+install: true
+jdk:
+  - oraclejdk7
 env:
   global:
     - XDG_RUNTIME_DIR="/tmp"
