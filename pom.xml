@@ -19,7 +19,8 @@
       <id>bmaggi</id>
       <email>benoit.maggi@gmail.com</email>
       <name>Benoît Maggi</name>
-      <url>https://github.com/bmaggi</url>
+      <organization>Benoit Maggi</organization>
+      <organizationUrl>https://github.com/bmaggi/</organizationUrl>
     </developer>
   </developers>
 
@@ -29,11 +30,6 @@
 			<url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html</url>
 		</license>
 	</licenses>
-  
-	<organization>
-		<name>Benoit Maggi</name>
-		<url>https://github.com/bmaggi/</url>
-	</organization>
 	
 	<scm>
 		<connection>scm:git:https://github.com/bmaggi/eclipse-tycho-archetype.git</connection>
