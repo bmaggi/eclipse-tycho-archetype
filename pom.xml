@@ -23,11 +23,10 @@
     </developer>
   </developers>
 
-  	<licenses>
+	<licenses>
 		<license>
 			<name>Eclipse Public License - v 2.0</name>
 			<url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html</url>
-			<distribution>repo</distribution>
 		</license>
 	</licenses>
   
