@@ -6,6 +6,7 @@ Continuous Integration
 ----------------------
 [![License](https://img.shields.io/badge/license-EPL2-blue.svg)](https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
 [![Build Status](https://travis-ci.org/bmaggi/eclipse-tycho-archetype.svg?branch=master)](https://travis-ci.org/bmaggi/eclipse-tycho-archetype)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype)
 
 Summary
 -------
@@ -28,11 +29,17 @@ Create project
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=0.1.0-SNAPSHOT \
-  -DgroupId=test \
-  -DartifactId=ab
+  -DarchetypeVersion=0.1.3 \
+  -DgroupId=com \
+  -DartifactId=acme
 ```
 
+- go in ${artifactId} directory
+- run ``` mvn clean install ```
+- get the created product in ${artifactId}\${artifactId}.product\target\products
+- get the product related to your platform
+- unzip it 
+- run your product
 
 |Parameter|Default Value|Description|
 |---------|-------------|-----------|
