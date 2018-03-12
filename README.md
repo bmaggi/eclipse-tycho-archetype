@@ -26,6 +26,13 @@ Generated structure
 
 Create project
 --------------
+
+|Parameter|Default Value|Description|
+|---------|-------------|-----------|
+|groupId|groupId|Maven 'groupId'|
+|artifactId|artifactId|Maven 'artifactId'|
+|version|0.1.0-SNAPSHOT|Maven 'version'|
+
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
@@ -41,11 +48,16 @@ mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
 - unzip it 
 - run your product
 
-|Parameter|Default Value|Description|
-|---------|-------------|-----------|
-|groupId|groupId|Maven 'groupId'|
-|artifactId|artifactId|Maven 'artifactId'|
-|version|0.1.0-SNAPSHOT|Maven 'version'|
+Create project in Eclipse (using Maven Central Archetype Catalog)
+-------------------------------------------------------
+
+- new Project > Maven >Maven Project
+- Next > Catalog : Configure
+- Add Remote Catalog : 'Maven Central' https://repo1.maven.org/maven2/archetype-catalog.xml
+- Apply and Close
+- Type 'com.github.bmaggi' in Filter
+- Select eclipse-tycho-archetype
+- Next > Set parameters > Finish
 
 Known issues
 --------------
