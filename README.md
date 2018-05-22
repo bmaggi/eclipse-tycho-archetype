@@ -2,15 +2,11 @@ eclipse-tycho-archetype
 =======================
 __An archetype to initialize an eclipse project__
 
-Continuous Integration   
+Status 
 ----------------------
 [![License](https://img.shields.io/badge/license-EPL2-blue.svg)](https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
 [![Build Status](https://travis-ci.org/bmaggi/eclipse-tycho-archetype.svg?branch=master)](https://travis-ci.org/bmaggi/eclipse-tycho-archetype)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype)
-
-Summary
--------
-
 
 Generated structure
 -------------------
@@ -51,7 +47,7 @@ mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
 Create project in Eclipse (using Maven Central Archetype Catalog)
 -------------------------------------------------------
 
-- new Project > Maven >Maven Project
+- new Project > Maven > Maven Project
 - Next > Catalog : Configure
 - Add Remote Catalog : 'Maven Central' https://repo1.maven.org/maven2/archetype-catalog.xml
 - Apply and Close
@@ -61,6 +57,6 @@ Create project in Eclipse (using Maven Central Archetype Catalog)
 
 Known issues
 --------------
-https://issues.apache.org/jira/browse/ARCHETYPE-505
+https://issues.apache.org/jira/browse/ARCHETYPE-505  
 temporary solution http://maven.40175.n5.nabble.com/hidden-and-ignore-files-in-an-archetype-td5808355.html
 
