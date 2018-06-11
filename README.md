@@ -19,27 +19,29 @@ Generated structure
 |-- com.acme.product
 |-- com.acme.targetplatform
 ```
-
-Create project
---------------
-
 |Parameter|Default Value|Description|
 |---------|-------------|-----------|
 |groupId|groupId|Maven 'groupId'|
 |artifactId|artifactId|Maven 'artifactId'|
 |version|0.1.0-SNAPSHOT|Maven 'version'|
+|tychoVersion|1.2.0|Tycho 'version'|
+|javaVersion|1.8|Java 'version'|
+|eclipsePlatform|oxygen|Eclipse target platform|
+
+Create project with Maven command line
+------------------------------------------
 
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=0.1.3 \
+  -DarchetypeVersion=0.1.4 \
   -DgroupId=com \
   -DartifactId=acme
 ```
 
 - go in ${artifactId} directory
 - run ``` mvn clean install ```
-- get the created product in ${artifactId}\${artifactId}.product\target\products
+- get the created product in ${artifactId}\\${artifactId}.product\target\products
 - get the product related to your platform
 - unzip it 
 - run your product
@@ -47,16 +49,11 @@ mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
 Create project in Eclipse (using Maven Central Archetype Catalog)
 -------------------------------------------------------
 
-- new Project > Maven > Maven Project
+- New Project > Maven > Maven Project
 - Next > Catalog : Configure
 - Add Remote Catalog : 'Maven Central' https://repo1.maven.org/maven2/archetype-catalog.xml
 - Apply and Close
 - Type 'com.github.bmaggi' in Filter
 - Select eclipse-tycho-archetype
 - Next > Set parameters > Finish
-
-Known issues
---------------
-https://issues.apache.org/jira/browse/ARCHETYPE-505  
-temporary solution http://maven.40175.n5.nabble.com/hidden-and-ignore-files-in-an-archetype-td5808355.html
 
