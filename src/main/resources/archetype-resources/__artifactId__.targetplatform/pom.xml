@@ -6,6 +6,6 @@
 		<artifactId>${artifactId}</artifactId>
 		<version>${version}</version>
 	</parent>	
-	<artifactId>${artifactId}.targetplatform.oxygen</artifactId>
+	<artifactId>${artifactId}.targetplatform</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 </project>

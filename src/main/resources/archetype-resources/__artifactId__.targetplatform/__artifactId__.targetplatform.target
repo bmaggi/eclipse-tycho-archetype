@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Eclipse Oxygen" sequenceNumber="1506582696">
+<target name="Eclipse ${eclipsePlatform}" sequenceNumber="1506582696">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
@@ -9,7 +9,7 @@
       <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
-      <repository id="eclipse-oxygen" location="http://download.eclipse.org/releases/oxygen/"/>
+      <repository id="eclipse-${eclipsePlatform}" location="http://download.eclipse.org/releases/${eclipsePlatform}/"/>
     </location>
   </locations>
 </target>

@@ -101,14 +101,14 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.targetplatform.oxygen" name="${rootArtifactId}">
+        <module id="${rootArtifactId}" dir="__artifactId__.targetplatform" name="${rootArtifactId}">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
                     <includes>
                         <include>category.xml</include>
-                        <include>__artifactId__.targetplatform.oxygen.target</include>
-                        <include>__artifactId__.targetplatform.oxygen.tpd</include>
+                        <include>__artifactId__.targetplatform.target</include>
+                        <include>__artifactId__.targetplatform.tpd</include>
                     </includes>
                 </fileSet>
             </fileSets>

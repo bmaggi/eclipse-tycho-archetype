@@ -1,6 +1,6 @@
-target "Eclipse Oxygen" with source requirements
+target "Eclipse ${eclipsePlatform}" with source requirements
 
-location "http://download.eclipse.org/releases/oxygen/" eclipse-oxygen {
+location "http://download.eclipse.org/releases/${eclipsePlatform}/" eclipse-${eclipsePlatform} {
  org.eclipse.platform.feature.group lazy
  org.eclipse.rcp.feature.group lazy
  org.eclipse.jdt.feature.group lazy

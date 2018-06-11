@@ -10,5 +10,5 @@ TODO:
 * ${artifactId}.feature :
 * ${artifactId}.p2 :
 * ${artifactId}.product :
-* ${artifactId}.targetplatform.oxygen :
+* ${artifactId}.targetplatform :
 * ${artifactId}.test :

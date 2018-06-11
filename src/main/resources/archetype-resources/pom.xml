@@ -17,7 +17,7 @@
         <module>${artifactId}.test</module>
         <module>${artifactId}.feature</module>
         <module>${artifactId}.p2</module>
-		<module>${artifactId}.targetplatform.oxygen</module>
+		<module>${artifactId}.targetplatform</module>
 		<module>${artifactId}.product</module>
    </modules>
    
@@ -296,7 +296,7 @@
           <target>
             <artifact>
               <groupId>${groupId}</groupId>
-              <artifactId>${artifactId}.targetplatform.oxygen</artifactId>
+              <artifactId>${artifactId}.targetplatform</artifactId>
               <version>${version}</version>
             </artifact>
           </target>
