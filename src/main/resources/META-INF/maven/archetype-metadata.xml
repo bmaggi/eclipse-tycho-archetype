@@ -19,8 +19,8 @@
         </requiredProperty>
         <!--TODO provide a default for package -->
     </requiredProperties>
-    <modules>
-        <module id="${rootArtifactId}" dir="__artifactId__.plugin" name="${rootArtifactId}">
+    <modules> <!--  do not use artifactId with multimodule -->
+        <module id="${rootArtifactId}.plugin" dir="__rootArtifactId__.plugin" name="${rootArtifactId}.plugin">
             <fileSets>
                <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/</directory>
@@ -44,7 +44,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.test" name="${rootArtifactId}">
+        <module id="${rootArtifactId}.test" dir="__rootArtifactId__.test" name="${rootArtifactId}.test">
             <fileSets>
                <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/</directory>
@@ -68,7 +68,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.feature" name="${rootArtifactId}">
+        <module id="${rootArtifactId}.feature" dir="__rootArtifactId__.feature" name="${rootArtifactId}.feature">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -80,7 +80,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.p2" name="${rootArtifactId}">
+        <module id="${rootArtifactId}.p2" dir="__rootArtifactId__.p2" name="${rootArtifactId}.p2">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -90,25 +90,25 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.product" name="${rootArtifactId}">
+        <module id="${rootArtifactId}.product" dir="__rootArtifactId__.product" name="${rootArtifactId}.product">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
                     <includes>
                         <include>category.xml</include>
-                        <include>__artifactId__.product</include>
+                        <include>__rootArtifactId__.product</include>
                     </includes>
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}" dir="__artifactId__.targetplatform" name="${rootArtifactId}">
+        <module id="${rootArtifactId}.targetplatform" dir="__rootArtifactId__.targetplatform" name="${rootArtifactId}.targetplatform">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
                     <includes>
                         <include>category.xml</include>
-                        <include>__artifactId__.targetplatform.target</include>
-                        <include>__artifactId__.targetplatform.tpd</include>
+                        <include>__rootArtifactId__.targetplatform.target</include>
+                        <include>__rootArtifactId__.targetplatform.tpd</include>
                     </includes>
                 </fileSet>
             </fileSets>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="${artifactId}.feature"
+      id="${artifactId}"
       label="Feature"
       version="1.0.0.qualifier">
 
@@ -17,7 +17,7 @@
    </license>
 
    <plugin
-         id="${artifactId}.plugin"
+         id="${rootArtifactId}.plugin"
          download-size="0"
          install-size="0"
          version="0.0.0"

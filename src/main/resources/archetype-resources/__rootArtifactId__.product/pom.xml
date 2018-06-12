@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>${groupId}</groupId>
-		<artifactId>${artifactId}</artifactId>
+		<artifactId>${rootArtifactId}</artifactId>
 		<version>${version}</version>
 	</parent>
-	<artifactId>${artifactId}.product</artifactId>
+	<artifactId>${artifactId}</artifactId>
 	<packaging>eclipse-repository</packaging>
 	<properties>
-		<product-id>${artifactId}.product</product-id>
+		<product-id>${artifactId}</product-id>
 	</properties>
 	<build>
 		<plugins>

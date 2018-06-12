@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="${rootArtifactId}.feature_1.0.0.qualifier.jar" id="${rootArtifactId}.feature" version="1.0.0.qualifier">
+      <category name="${rootArtifactId}.category"/>
+   </feature>
+   <feature url="${rootArtifactId}.feature.source_1.0.0.qualifier.jar" id="${rootArtifactId}.feature.source" version="1.0.0.qualifier">
+      <category name="${rootArtifactId}.category"/>
+   </feature>
+   <category-def name="${rootArtifactId}.category" label="${rootArtifactId} Category">
+      <description>
+         ${rootArtifactId} Category
+      </description>
+   </category-def>
+</site>

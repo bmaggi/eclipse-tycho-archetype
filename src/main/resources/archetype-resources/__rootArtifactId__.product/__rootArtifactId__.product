@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="${artifactId} Product" uid="${artifactId}.product" id="${artifactId}.rcp.product" application="org.eclipse.ui.ide.workbench" version="1.2.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="${rootArtifactId} Product" uid="${rootArtifactId}.product" id="${rootArtifactId}.rcp.product" application="org.eclipse.ui.ide.workbench" version="1.2.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <text>
@@ -31,7 +31,7 @@
       <feature id="org.eclipse.equinox.p2.extras.feature"/>
       <feature id="org.eclipse.ecf.core.feature"/>
       <feature id="org.eclipse.e4.rcp"/>
-      <feature id="${artifactId}.feature"/>
+      <feature id="${rootArtifactId}.feature"/>
    </features>
 
    <configurations>
