@@ -34,7 +34,7 @@ Create project with Maven command line
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=0.1.4 \
+  -DarchetypeVersion=0.1.5 \
   -DgroupId=com \
   -DartifactId=acme
 ```
@@ -51,7 +51,7 @@ Create project in Eclipse (using Maven Central Archetype Catalog)
 
 - New Project > Maven > Maven Project
 - Next > Catalog : Configure
-- Add Remote Catalog : 'Maven Central' https://repo1.maven.org/maven2/archetype-catalog.xml
+- Add Remote Catalog : 'eclipse-tycho-archetype' https://bmaggi.github.io/eclipse-tycho-archetype/
 - Apply and Close
 - Type 'com.github.bmaggi' in Filter
 - Select eclipse-tycho-archetype
