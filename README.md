@@ -2,7 +2,7 @@ eclipse-tycho-archetype
 =======================
 __An archetype to initialize an eclipse project__
 
-Status 
+Status
 ----------------------
 [![License](https://img.shields.io/badge/license-EPL2-blue.svg)](https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
 [![Build Status](https://travis-ci.org/bmaggi/eclipse-tycho-archetype.svg?branch=master)](https://travis-ci.org/bmaggi/eclipse-tycho-archetype)
@@ -26,7 +26,7 @@ Generated structure
 |version|0.1.0-SNAPSHOT|Maven 'version'|
 |tychoVersion|1.2.0|Tycho 'version'|
 |javaVersion|1.8|Java 'version'|
-|eclipsePlatform|oxygen|Eclipse target platform|
+|eclipsePlatform|photon|Eclipse target platform|
 
 Create project with Maven command line
 ------------------------------------------
@@ -43,7 +43,7 @@ mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
 - run ``` mvn clean install ```
 - get the created product in ${artifactId}\\${artifactId}.product\target\products
 - get the product related to your platform
-- unzip it 
+- unzip it
 - run your product
 
 Create project in Eclipse (using Maven Central Archetype Catalog)

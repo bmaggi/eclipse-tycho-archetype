@@ -2,7 +2,7 @@
 Description of the project
 
 TODO:
- - the licence should be defined
+ - the licence should be defined George
 
 ==Structure of the projet==
 

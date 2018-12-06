@@ -4,7 +4,7 @@
   <artifactId>eclipse-tycho-archetype</artifactId>
   <version>0.1.6-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
-  
+
   <name>Archetype - Eclipse Tycho</name>
   <url>https://github.com/bmaggi/eclipse-tycho-archetype</url>
   <description>An archetype to generate eclipse tycho project</description>
@@ -30,14 +30,14 @@
 			<url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html</url>
 		</license>
 	</licenses>
-	
+
 	<scm>
 		<connection>scm:git:https://github.com/bmaggi/eclipse-tycho-archetype.git</connection>
 		<developerConnection>scm:git:https://github.com/bmaggi/eclipse-tycho-archetype.git</developerConnection>
 		<url>http://github.com/bmaggi/eclipse-tycho-archetype/tree/master</url>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<issueManagement>
 		<url>https://github.com/bmaggi/eclipse-tycho-archetype/issues</url>
 		<system>GitHub Issues</system>
@@ -46,12 +46,12 @@
 	<ciManagement>
 		<system>travis</system>
 		<url>https://travis-ci.org/bmaggi/eclipse-tycho-archetype</url>
-	</ciManagement>	
-	
+	</ciManagement>
+
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
-	
+
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -61,8 +61,8 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-	</distributionManagement>	
-	
+	</distributionManagement>
+
   <build>
     <extensions>
       <extension>
@@ -104,9 +104,9 @@
 						<artifactId>maven-scm-plugin</artifactId>
 						<version>1.11.1</version>
 					</dependency>
-				</dependencies>			
-          </plugin>		  
-	  
+				</dependencies>
+          </plugin>
+
         <plugin>
           <artifactId>maven-archetype-plugin</artifactId>
           <version>3.0.1</version>
@@ -149,7 +149,7 @@
 			<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 			<autoReleaseAfterClose>true</autoReleaseAfterClose>
 		  </configuration>
-		</plugin>		
+		</plugin>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-source-plugin</artifactId>
@@ -189,7 +189,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</reporting>  
+	</reporting>
 	<profiles>
 		<profile>
 			<id>ossrh</id>
