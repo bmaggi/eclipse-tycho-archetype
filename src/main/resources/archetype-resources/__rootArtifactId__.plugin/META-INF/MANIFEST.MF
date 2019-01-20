@@ -6,7 +6,7 @@ Bundle-SymbolicName: ${artifactId}
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.ui,
   org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-${javaVersion}
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ${package}.Activator
 Automatic-Module-Name: ${artifactId}

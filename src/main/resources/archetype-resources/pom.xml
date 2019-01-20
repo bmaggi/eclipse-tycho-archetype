@@ -149,8 +149,8 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-compiler-plugin</artifactId>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>${javaVersion}</source>
+          <target>${javaVersion}</target>
           <optimize>true</optimize>
           <showWarnings>true</showWarnings>
         </configuration>
