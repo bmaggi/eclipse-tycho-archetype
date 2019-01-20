@@ -1,0 +1,12 @@
+<archetype-catalog xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd">
+  <archetypes>
+    <archetype>
+  <groupId>com.github.bmaggi</groupId>
+  <artifactId>eclipse-tycho-archetype</artifactId>
+  <version>0.1.6-SNAPSHOT</version>
+      <repository/>
+      <description>Tycho archetype</description>
+    </archetype>
+  </archetypes>
+</archetype-catalog>
