@@ -17,6 +17,9 @@
         <requiredProperty key="eclipsePlatform">
             <defaultValue>oxygen</defaultValue>
         </requiredProperty>
+        <requiredProperty key="junitVersion">
+            <defaultValue>4.12</defaultValue>
+        </requiredProperty>        
         <!--TODO provide a default for package -->
     </requiredProperties>
     <modules> <!--  do not use artifactId with multimodule -->

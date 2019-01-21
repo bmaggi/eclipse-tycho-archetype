@@ -11,15 +11,6 @@
     <sonar.exclusions>**/src-gen/**</sonar.exclusions>
     <env.ui.test>-Xms512m -Xmx2048m</env.ui.test>
   </properties>
-   
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 
   <build>
     <pluginManagement>
