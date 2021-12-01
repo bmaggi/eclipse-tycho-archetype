@@ -4,6 +4,8 @@ target/
 *.pyc
 .DS_Store
 .project
+.classpath
+.settings/
 *.log
 *.xtendbin
 *~

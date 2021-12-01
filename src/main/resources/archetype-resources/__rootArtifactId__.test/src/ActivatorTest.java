@@ -1,13 +1,13 @@
 package ${package};
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ActivatorTest {
 
 	@Test
 	public void testActivatorId() {
-		Assert.assertNotNull(Activator.PLUGIN_ID);
+		Assertions.assertNotNull(Activator.PLUGIN_ID);
 	}
 
 }
