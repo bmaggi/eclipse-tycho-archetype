@@ -6,5 +6,5 @@ Bundle-SymbolicName: ${artifactId}
 Bundle-Version: 1.0.0.qualifier
 Fragment-Host: ${rootArtifactId}.plugin;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-${javaVersion}
-Require-Bundle: org.junit.jupiter.api;bundle-version="${junitVersion}"
+Require-Bundle: org.junit.jupiter.api
 Automatic-Module-Name: ${artifactId}

@@ -17,9 +17,6 @@
         <requiredProperty key="eclipsePlatform">
             <defaultValue>photon</defaultValue>
         </requiredProperty>
-        <requiredProperty key="junitVersion">
-            <defaultValue>5.7.1</defaultValue>
-        </requiredProperty>
         <!--TODO provide a default for package -->
     </requiredProperties>
     <modules> <!--  do not use artifactId with multimodule -->

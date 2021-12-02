@@ -28,7 +28,6 @@ Generated structure
 |tychoVersion|2.5.0|Tycho 'version'|
 |javaVersion|11|Java 'version'|
 |eclipsePlatform|photon|Eclipse target platform|
-|junitVersion|5.7.1|Unit tests|
 
 Create project with Maven command line
 ------------------------------------------
