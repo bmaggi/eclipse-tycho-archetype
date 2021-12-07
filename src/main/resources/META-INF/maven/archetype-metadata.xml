@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="eclipse-tycho-archetype-descriptor" xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
+
 	 <!-- dot character makes is unusable in Velocity template -->
 	<requiredProperties>
         <requiredProperty key="version">
@@ -9,17 +9,14 @@
             <validationRegex><![CDATA[^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT]]></validationRegex>
         </requiredProperty>
         <requiredProperty key="tychoVersion">
-            <defaultValue>1.2.0</defaultValue>
+            <defaultValue>2.5.0</defaultValue>
         </requiredProperty>
         <requiredProperty key="javaVersion">
-            <defaultValue>1.8</defaultValue>
+            <defaultValue>11</defaultValue>
         </requiredProperty>
         <requiredProperty key="eclipsePlatform">
-            <defaultValue>oxygen</defaultValue>
+            <defaultValue>photon</defaultValue>
         </requiredProperty>
-        <requiredProperty key="junitVersion">
-            <defaultValue>4.12</defaultValue>
-        </requiredProperty>        
         <!--TODO provide a default for package -->
     </requiredProperties>
     <modules> <!--  do not use artifactId with multimodule -->
