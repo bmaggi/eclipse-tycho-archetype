@@ -35,7 +35,7 @@ Create project with Maven command line
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=0.1.6 \
+  -DarchetypeVersion=1.0.0 \
   -DgroupId=com \
   -DartifactId=acme
 ```
