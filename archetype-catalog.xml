@@ -8,7 +8,25 @@
       <artifactId>eclipse-tycho-archetype</artifactId>
       <version>0.1.5</version>
       <description>An archetype to generate eclipse tycho project</description>
-	   <repository>http://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/0.1.5/</repository>
+	   <repository>https://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/0.1.5/</repository>
+	   
     </archetype>
+    <archetype>
+      <groupId>com.github.bmaggi</groupId>
+      <artifactId>eclipse-tycho-archetype</artifactId>
+      <version>0.1.6</version>
+      <description>An archetype to generate eclipse tycho project</description>
+	   <repository>https://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/0.1.6/</repository>
+	   
+    </archetype>
+    <archetype>
+      <groupId>com.github.bmaggi</groupId>
+      <artifactId>eclipse-tycho-archetype</artifactId>
+      <version>1.0.0</version>
+      <description>An archetype to generate eclipse tycho project</description>
+	   <repository>http://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/1.0.0/</repository>
+	   
+    </archetype>
+
   </archetypes>
 </archetype-catalog>
