@@ -109,7 +109,7 @@
 
 				<plugin>
 					<artifactId>maven-archetype-plugin</artifactId>
-					<version>3.2.0</version>
+					<version>3.2.1</version>
 					<!-- parent pom contains multiple blank lines between nodes: https://issues.apache.org/jira/browse/ARCHETYPE-587 -->
 					<dependencies>
 						<dependency>
