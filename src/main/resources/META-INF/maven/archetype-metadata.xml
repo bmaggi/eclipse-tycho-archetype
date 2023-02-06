@@ -9,13 +9,13 @@
             <validationRegex><![CDATA[^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT]]></validationRegex>
         </requiredProperty>
         <requiredProperty key="tychoVersion">
-            <defaultValue>2.5.0</defaultValue>
+            <defaultValue>3.0.1</defaultValue>
         </requiredProperty>
         <requiredProperty key="javaVersion">
-            <defaultValue>11</defaultValue>
+            <defaultValue>17</defaultValue>
         </requiredProperty>
         <requiredProperty key="eclipsePlatform">
-            <defaultValue>photon</defaultValue>
+            <defaultValue>latest</defaultValue>
         </requiredProperty>
         <!--TODO provide a default for package -->
     </requiredProperties>
