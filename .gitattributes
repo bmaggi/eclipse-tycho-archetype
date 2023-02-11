@@ -66,4 +66,5 @@
 *.so            binary
 *.svg           binary
 *.war           binary
-
+*.ejb           binary
+*.zip           binary

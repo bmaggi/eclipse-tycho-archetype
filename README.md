@@ -24,10 +24,10 @@ Generated structure
 |---------|-------------|-----------|
 |groupId|groupId|Maven 'groupId'|
 |artifactId|artifactId|Maven 'artifactId'|
-|version|0.1.0-SNAPSHOT|Maven 'version'|
-|tychoVersion|2.5.0|Tycho 'version'|
-|javaVersion|11|Java 'version'|
-|eclipsePlatform|photon|Eclipse target platform|
+|version|1.0.0-SNAPSHOT|Maven 'version'|
+|tychoVersion|3.0.1|Tycho 'version'|
+|javaVersion|17|Java 'version'|
+|eclipsePlatform|latest|Eclipse target platform|
 
 Create project with Maven command line
 ------------------------------------------
@@ -35,13 +35,14 @@ Create project with Maven command line
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
   -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=1.0.0 \
+  -DarchetypeVersion=1.0.0-SNAPSHOT \
   -DgroupId=com \
   -DartifactId=acme
 ```
 
 - go in ${artifactId} directory
-- run ``` mvn clean install ```
+- (optional) change version with ```mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=6.4.0-SNAPSHOT```
+- run ```mvn clean install ```
 - get the created product in ${artifactId}\\${artifactId}.product\target\products
 - get the product related to your platform
 - unzip it
@@ -56,5 +57,6 @@ Create project in Eclipse (using Maven Central Archetype Catalog)
 - Apply and Close
 - Type 'com.github.bmaggi' in Filter
 - Select eclipse-tycho-archetype
-- Next > Set parameters > Finish
+- Next > Set version to 1.0.0-SNAPSHOT (m2e will override whatever you provide)
+- Set parameters > Finish
 
