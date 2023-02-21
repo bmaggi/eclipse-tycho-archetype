@@ -1,5 +1,7 @@
 To release on maven central.
 ----------------------------
+
+- repo should be clone using ssh (scm plugin not working with https)
 ```  
 mvn release:clean release:prepare 
 ```  
@@ -21,3 +23,5 @@ mvn release:perform
   - More in the [Release Documentation](http://central.sonatype.org/pages/releasing-the-deployment.html) and in [Requirement for Maven Central](http://central.sonatype.org/pages/requirements.html)
  
 The new version should be available at [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22eclipse-tycho-archetype%22)
+
+⚠️ In case of use ``` gpg: can't connect to the agent: Invalid value passed to IPC ``` use ```gpg-connect-agent -v``` to _reboot_ gpg agent
