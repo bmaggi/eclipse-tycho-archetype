@@ -33,11 +33,7 @@ Create project with Maven command line
 ------------------------------------------
 
 ```
-mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi \
-  -DarchetypeArtifactId=eclipse-tycho-archetype \
-  -DarchetypeVersion=1.0.0-SNAPSHOT \
-  -DgroupId=com \
-  -DartifactId=acme
+mvn archetype:generate -DarchetypeGroupId=com.github.bmaggi -DarchetypeArtifactId=eclipse-tycho-archetype -DarchetypeVersion=1.0.2 -DgroupId=com -DartifactId=acme
 ```
 
 - go in ${artifactId} directory
