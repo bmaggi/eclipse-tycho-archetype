@@ -35,5 +35,12 @@
 	   <repository>http://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/1.0.2/</repository>
 	   
     </archetype>
+    <archetype>
+      <groupId>com.github.bmaggi</groupId>
+      <artifactId>eclipse-tycho-archetype</artifactId>
+      <version>1.0.3</version>
+      <description>An archetype to generate eclipse tycho project</description>
+	   <repository>http://repo1.maven.org/maven2/com/github/bmaggi/eclipse-tycho-archetype/1.0.3/</repository>	   
+    </archetype>
   </archetypes>
 </archetype-catalog>
