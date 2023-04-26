@@ -14,11 +14,10 @@ mvn release:perform
    - Log in [Nexus Sonatype](https://oss.sonatype.org/) 
    - Check eclipse-tycho-archetype in Staging repository
    - Close the repository (just after the refresh button)
-   - Click on the release button
-   - Wait around 2 hours
+   - Wait 2 to 6 hours
    - Log in [Nexus Sonatype](https://oss.sonatype.org/)    
    - Click on the release button   
-   - Wait around 2 hours before checking
+   - Wait around 24 hours before checking
   - Add reference to the new version in the catalog shared in gh-pages branch 
   - More in the [Release Documentation](http://central.sonatype.org/pages/releasing-the-deployment.html) and in [Requirement for Maven Central](http://central.sonatype.org/pages/requirements.html)
  
