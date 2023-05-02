@@ -5,7 +5,7 @@ __An archetype to initialize an eclipse project__
 Status
 ----------------------
 [![License](https://img.shields.io/badge/license-EPL2-blue.svg)](https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html)
-[![Build Status](https://travis-ci.org/bmaggi/eclipse-tycho-archetype.svg?branch=master)](https://travis-ci.org/bmaggi/eclipse-tycho-archetype)
+[![Build Status](https://github.com/bmaggi/eclipse-tycho-archetype/actions/workflows/maven.yml/badge.svg)](https://github.com/bmaggi/eclipse-tycho-archetype/actions/workflows/maven.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.bmaggi/eclipse-tycho-archetype)
 
 Generated structure
