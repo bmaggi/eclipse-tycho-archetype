@@ -1,7 +1,12 @@
 To release on maven central.
 ----------------------------
 
-- repo should be clone using ssh (scm plugin not working with https)
+- Check that the default generated values are the ones recommended
+  - Java from [Eclipse Installation](https://wiki.eclipse.org/Eclipse/Installation)
+  - Tycho from [Maven Central](https://mvnrepository.com/artifact/org.eclipse.tycho/tycho-core)
+
+----------------------------
+- Repo should be clone using ssh (scm plugin not working with https)
 ```  
 mvn release:clean release:prepare 
 ```  
