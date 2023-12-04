@@ -9,7 +9,7 @@
             <validationRegex><![CDATA[^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT]]></validationRegex>
         </requiredProperty>
         <requiredProperty key="tychoVersion">
-            <defaultValue>3.0.1</defaultValue>
+            <defaultValue>4.0.4</defaultValue>
         </requiredProperty>
         <requiredProperty key="javaVersion">
             <defaultValue>17</defaultValue>
