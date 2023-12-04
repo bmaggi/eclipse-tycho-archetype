@@ -6,7 +6,7 @@ To release on maven central.
   - Tycho from [Maven Central](https://mvnrepository.com/artifact/org.eclipse.tycho/tycho-core)
 
 ----------------------------
-- Repo should be clone using ssh (scm plugin not working with https)
+- Repo should be cloned using ssh (scm plugin not working with https)
 ```  
 mvn release:clean release:prepare 
 ```  

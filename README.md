@@ -20,14 +20,14 @@ Generated structure
 |-- com.acme.targetplatform
 ```
 ---
-|Parameter|Default Value|Description|
-|---------|-------------|-----------|
-|groupId|groupId|Maven 'groupId'|
-|artifactId|artifactId|Maven 'artifactId'|
-|version|1.0.0-SNAPSHOT|Maven 'version'|
-|tychoVersion|3.0.1|Tycho 'version'|
-|javaVersion|17|Java 'version'|
-|eclipsePlatform|latest|Eclipse target platform|
+| Parameter       | Default Value  | Description             |
+|-----------------|----------------|-------------------------|
+| groupId         | groupId        | Maven 'groupId'         |
+| artifactId      | artifactId     | Maven 'artifactId'      |
+| version         | 1.0.0-SNAPSHOT | Maven 'version'         |
+| tychoVersion    | 4.0.4          | Tycho 'version'         |
+| javaVersion     | 17             | Java 'version'          |
+| eclipsePlatform | latest         | Eclipse target platform |
 
 Create project with Maven command line
 ------------------------------------------
