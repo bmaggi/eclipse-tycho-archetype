@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>${groupId}</groupId>
     <artifactId>${rootArtifactId}</artifactId>
@@ -8,8 +8,11 @@
     <packaging>pom</packaging>
     <properties>
         <tycho.version>${tychoVersion}</tycho.version>
+        <tycho.extras.version>${tychoExtrasVersion}</tycho.extras.version>
         <sonar.exclusions>**/src-gen/**</sonar.exclusions>
         <env.ui.test>-Xms512m -Xmx2048m</env.ui.test>
+        <min.jdk.version>17</min.jdk.version> <!-- Use same version as eclipse release train latest -->
+        <min.maven.version>3.6.3</min.maven.version> <!-- Use minimal maintained version in https://maven.apache.org/docs/history.html -->
     </properties>
     <repositories>
         <repository>
@@ -18,6 +21,14 @@
             <layout>p2</layout>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>eclipse-cbi-releases</id>
+            <name>Eclipse CBI Releases</name>
+            <url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+            <layout>default</layout>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <pluginManagement>
             <plugins>
@@ -37,6 +48,11 @@
                     <version>3.0.0</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>3.1.1</version>
+                </plugin>
+                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>3.3.0</version>
@@ -50,6 +66,26 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>3.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>enforce-requirements</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <banDuplicatePomDependencyVersions/>
+                                    <requireJavaVersion>
+                                        <version>${min.jdk.version}</version>
+                                    </requireJavaVersion>
+                                    <requireMavenVersion>
+                                        <version>${min.maven.version}</version>
+                                    </requireMavenVersion>
+                                    <requirePluginVersions/>
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -90,7 +126,7 @@
                 <plugin>
                     <groupId>org.eclipse.tycho.extras</groupId>
                     <artifactId>tycho-source-feature-plugin</artifactId>
-                    <version>${tycho.version}</version>
+                    <version>${tycho.extras.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.eclipse.tycho</groupId>
@@ -118,23 +154,46 @@
                     <version>${tycho.version}</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-ds-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-p2-publisher-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-packaging-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-bnd-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>org.eclipse.tycho.extras</groupId>
                     <artifactId>tycho-pack200a-plugin</artifactId>
-                    <version>${tycho.version}</version>
+                    <version>${tycho.extras.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.eclipse.tycho.extras</groupId>
                     <artifactId>tycho-pack200b-plugin</artifactId>
-                    <version>${tycho.version}</version>
+                    <version>${tycho.extras.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.eclipse.cbi.maven.plugins</groupId>
                     <artifactId>eclipse-jarsigner-plugin</artifactId>
-                    <version>1.1.7</version>
+                    <version>1.4.3</version>
                 </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -179,27 +238,27 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <plugin id="com.google.guava" />
-                                <plugin id="com.google.inject" />
-                                <plugin id="org.apache.batik.pdf" />
-                                <plugin id="org.apache.log4j" />
-                                <plugin id="org.apache.batik.bridge" />
-                                <plugin id="org.apache.batik.css" />
-                                <plugin id="org.apache.batik.dom" />
-                                <plugin id="org.apache.batik.dom.svg" />
-                                <plugin id="org.apache.batik.ext.awt" />
-                                <plugin id="org.apache.batik.parser" />
-                                <plugin id="org.apache.batik.svggen" />
-                                <plugin id="org.apache.batik.transcoder" />
-                                <plugin id="org.apache.batik.util" />
-                                <plugin id="org.apache.batik.util.gui" />
-                                <plugin id="org.apache.batik.xml" />
-                                <plugin id="org.apache.commons.lang" />
-                                <plugin id="org.eclipse.m2m.qvt.oml.project" />
-                                <plugin id="org.eclipse.m2m.qvt.oml.runtime" />
-                                <plugin id="org.eclipse.xtend.shared.ui" />
-                                <plugin id="org.eclipse.xwt.ui.workbench" />
-                                <plugin id="org.eclipse.wst.common.project.facet.core" />
+                                <plugin id="com.google.guava"/>
+                                <plugin id="com.google.inject"/>
+                                <plugin id="org.apache.batik.pdf"/>
+                                <plugin id="org.apache.log4j"/>
+                                <plugin id="org.apache.batik.bridge"/>
+                                <plugin id="org.apache.batik.css"/>
+                                <plugin id="org.apache.batik.dom"/>
+                                <plugin id="org.apache.batik.dom.svg"/>
+                                <plugin id="org.apache.batik.ext.awt"/>
+                                <plugin id="org.apache.batik.parser"/>
+                                <plugin id="org.apache.batik.svggen"/>
+                                <plugin id="org.apache.batik.transcoder"/>
+                                <plugin id="org.apache.batik.util"/>
+                                <plugin id="org.apache.batik.util.gui"/>
+                                <plugin id="org.apache.batik.xml"/>
+                                <plugin id="org.apache.commons.lang"/>
+                                <plugin id="org.eclipse.m2m.qvt.oml.project"/>
+                                <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
+                                <plugin id="org.eclipse.xtend.shared.ui"/>
+                                <plugin id="org.eclipse.xwt.ui.workbench"/>
+                                <plugin id="org.eclipse.wst.common.project.facet.core"/>
                             </excludes>
                         </configuration>
                     </execution>
