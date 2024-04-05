@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="eclipse-tycho-archetype-descriptor" xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<archetype-descriptor
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="eclipse-tycho-archetype-descriptor"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0">
 
-	 <!-- dot character makes is unusable in Velocity template -->
-	<requiredProperties>
+    <!-- dot character makes is unusable in Velocity template -->
+    <requiredProperties>
         <requiredProperty key="version">
             <defaultValue>1.0.0-SNAPSHOT</defaultValue>
             <validationRegex><![CDATA[^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT]]></validationRegex>
         </requiredProperty>
         <requiredProperty key="tychoVersion">
             <defaultValue>4.0.4</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="tychoExtrasVersion"> <!-- TODO check if still required doesn't seems maintained -->
+            <defaultValue>2.7.5</defaultValue>
         </requiredProperty>
         <requiredProperty key="javaVersion">
             <defaultValue>17</defaultValue>
@@ -22,7 +27,7 @@
     <modules> <!--  do not use artifactId with multimodule -->
         <module id="${rootArtifactId}.plugin" dir="__rootArtifactId__.plugin" name="${rootArtifactId}.plugin">
             <fileSets>
-               <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/</directory>
                     <includes>
                         <include>**/*.java</include>
@@ -46,7 +51,7 @@
         </module>
         <module id="${rootArtifactId}.test" dir="__rootArtifactId__.test" name="${rootArtifactId}.test">
             <fileSets>
-               <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/</directory>
                     <includes>
                         <include>**/*.java</include>
