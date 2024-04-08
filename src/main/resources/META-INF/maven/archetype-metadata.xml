@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="eclipse-tycho-archetype-descriptor"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="eclipse-tycho-archetype-descriptor"
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0">
 
     <!-- dot character makes is unusable in Velocity template -->
@@ -11,7 +12,7 @@
             <validationRegex><![CDATA[^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT]]></validationRegex>
         </requiredProperty>
         <requiredProperty key="tychoVersion">
-            <defaultValue>4.0.4</defaultValue>
+            <defaultValue>4.0.7</defaultValue>
         </requiredProperty>
         <requiredProperty key="tychoExtrasVersion"> <!-- TODO check if still required doesn't seems maintained -->
             <defaultValue>2.7.5</defaultValue>
