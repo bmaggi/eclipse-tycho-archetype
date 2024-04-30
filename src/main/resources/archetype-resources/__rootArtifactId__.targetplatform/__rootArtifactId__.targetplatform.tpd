@@ -1,6 +1,6 @@
 target "Eclipse ${eclipsePlatform}" with source requirements
 
-location "http://download.eclipse.org/releases/${eclipsePlatform}/" eclipse-${eclipsePlatform} {
+location "https://download.eclipse.org/releases/${eclipsePlatform}/" eclipse-${eclipsePlatform} {
  org.eclipse.platform.feature.group lazy
  org.eclipse.rcp.feature.group lazy
  org.eclipse.jdt.feature.group lazy

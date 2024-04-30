@@ -9,7 +9,7 @@
       <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
-      <repository id="eclipse-${eclipsePlatform}" location="http://download.eclipse.org/releases/${eclipsePlatform}/"/>
+      <repository id="eclipse-${eclipsePlatform}" location="https://download.eclipse.org/releases/${eclipsePlatform}/"/>
     </location>
   </locations>
 </target>
